@@ -14,7 +14,7 @@ class Brave < Character
 
     attack_message(attack_type: attack_type)
 
-    # puts "#{monster.name}の残りHPは#{monster.hp}だ"
+    damage_message(target: monster, damage: damage)
   end
 
   private
