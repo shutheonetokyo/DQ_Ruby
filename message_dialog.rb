@@ -21,6 +21,7 @@ module MessageDialog
 
   def end_message(result)
     if result[:brave_win_flag]
+
       puts <<~EOS
 
       勇者は勝った
@@ -36,5 +37,16 @@ module MessageDialog
       EOS
     end
   end
+  
+  def transform_message(**params)
+    origin_name = params[:origin_name]
+    transform_name = params[:transform_name]
 
+    puts <<~EOS
+
+    #{origin_name}は怒っている
+    #{origin_name}は#{transform_name}に変身した
+
+    EOS
+  end
 end
